@@ -25,3 +25,7 @@ Now to see the magic:
     $ adb shell am start -n io.appium.unlock/.Unlock
 
 Voila! Your device or emulator is awake and unlocked!
+
+# License
+
+Apache License 2.0 
