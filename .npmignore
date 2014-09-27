@@ -1,0 +1,3 @@
+gen
+bin/*
+!bin/unlock_apk-debug.apk

@@ -1,0 +1,35 @@
+{
+  "name": "unlock_apk",
+  "version": "1.0.2",
+  "description": "Android helper Activity to unlock + wakeup the device",
+  "main": "bin/unlock_apk-debug.apk",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "ant debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/unlock_apk.git"
+  },
+  "keywords": [
+    "appium",
+    "appium-dev",
+    "android",
+    "unlock"
+  ],
+  "author": {
+    "name": "filmaj",
+    "url": "http://github.com/filmaj"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/appium/unlock_apk/issues"
+  },
+  "homepage": "https://github.com/appium/unlock_apk",
+  "readme": "# Unlock\n\n> Wake up and unlock an Android device or emulator.\n\nA small and simple Android application that, when run, wakes up the device, unlocks the screen. Then the application shuts down.\n\n# Requirements\n\n* [Android SDK](developer.android.com)\n\n# Building\n\n    $ cd into/this/repo\n    $ ant debug\n\nYou can also run `ant debug install` to build and immediately deploy the app to a connected Android device or emulator.\n\n# Running\n\nOnce installed on a device, turn the device's screen off. If you have a security lock on your device, turning the screen off will\nalso enable the security lock.\n\nNow to see the magic:\n\n    $ adb shell am start -n io.appium.unlock/.Unlock\n\nVoila! Your device or emulator is awake and unlocked!\n\n# License\n\nApache License 2.0 \n",
+  "readmeFilename": "README.md",
+  "gitHead": "b590d4252785e3a588946456cc2e3031424e4248",
+  "_id": "unlock_apk@1.0.0",
+  "_shasum": "d11ee2ce359a82c9e42828bc929cec44419f9dc7",
+  "_from": "unlock_apk@*"
+}
