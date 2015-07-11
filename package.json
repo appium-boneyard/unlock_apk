@@ -1,0 +1,24 @@
+{
+  "name": "appium-unlock",
+  "version": "0.0.0",
+  "description": "App for unlocking an android device",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "ant clean debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/unlock_apk"
+  },
+  "keywords": [
+    "appium",
+    "android",
+    "settings"
+  ],
+  "author": "https://github.com/imurchie",
+  "license": "apache-2.0",
+  "bugs": {
+    "url": "https://github.com/appium/unlock_apk/issues"
+  },
+  "homepage": "https://github.com/appium/unlock_apk"
+}
