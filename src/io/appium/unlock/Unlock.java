@@ -12,10 +12,8 @@ public class Unlock extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
         // Set window flags to unlock screen. This works on most devices by itself.
         Window window = this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         window.addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
         window.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
 
@@ -24,5 +22,12 @@ public class Unlock extends Activity
         KeyguardManager mKeyGuardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         KeyguardManager.KeyguardLock mLock = mKeyGuardManager.newKeyguardLock("Unlock");
         mLock.disableKeyguard();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) 
+    {
+        super.onPostCreate(savedInstanceState);
+        moveTaskToBack(true);
     }
 }
