@@ -1,6 +1,6 @@
 {
   "name": "appium-unlock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "App for unlocking an android device",
   "main": "index.js",
   "scripts": {
