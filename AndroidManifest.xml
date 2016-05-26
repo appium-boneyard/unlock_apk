@@ -3,6 +3,10 @@
       package="io.appium.unlock"
       android:versionCode="1"
       android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="5"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <activity android:name="Unlock"
           android:label="@string/app_name"
@@ -18,7 +22,4 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 </manifest>
