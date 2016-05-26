@@ -22,7 +22,7 @@ public class Unlock extends Activity
 
         // some devices needs waking up screen first before disable keyguard
         PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock screenLock = powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK, "");
+        PowerManager.WakeLock screenLock = powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK, getLocalClassName());
         screenLock.acquire();
 
         if (screenLock.isHeld()) {
@@ -33,7 +33,7 @@ public class Unlock extends Activity
         // AndroidManifest.xml will do the trick
         KeyguardManager mKeyGuardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         if (mKeyGuardManager.inKeyguardRestrictedInputMode()) {
-            KeyguardManager.KeyguardLock keyguardLock = mKeyGuardManager.newKeyguardLock("Unlock");
+            KeyguardManager.KeyguardLock keyguardLock = mKeyGuardManager.newKeyguardLock(getLocalClassName());
             keyguardLock.disableKeyguard();
         }
 
