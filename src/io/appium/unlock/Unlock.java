@@ -45,4 +45,10 @@ public class Unlock extends Activity
         super.onPostCreate(savedInstanceState);
         moveTaskToBack(true);
     }
+    
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
 }
