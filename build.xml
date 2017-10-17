@@ -89,4 +89,10 @@
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
+    <target name="set-version">
+        <replaceregexp file="AndroidManifest.xml" match='android:versionCode="(.*)"'
+            replace='android:versionCode="${env.npm_package_versionCode}"'/>
+        <replaceregexp file="AndroidManifest.xml" match='android:versionName="(.*)"'
+            replace='android:versionName="${env.npm_package_version}"'/>
+    </target>
 </project>

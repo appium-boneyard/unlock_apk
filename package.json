@@ -1,10 +1,11 @@
 {
   "name": "appium-unlock",
   "version": "0.1.1",
+  "versionCode": "1",
   "description": "App for unlocking an android device",
   "main": "index.js",
   "scripts": {
-    "prepublish": "ant clean debug"
+    "prepublish": "ant set-version clean debug"
   },
   "repository": {
     "type": "git",
