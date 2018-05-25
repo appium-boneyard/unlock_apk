@@ -1,5 +1,7 @@
 # Unlock
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/appium/unlock_apk.svg)](https://greenkeeper.io/)
+
 > Wake up and unlock an Android device or emulator.
 
 A small and simple Android application that, when run, wakes up the device, unlocks the screen. Then the application shuts down.
